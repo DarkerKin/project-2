@@ -23,3 +23,11 @@ In supervised learning, we need to separate Independent variables that describe 
 We split into training (80%) and testing (20%) sets so we can evaluate how well the model generalizes to unseen data. we need to ensure that the same churn/non-churn ratio in both train and test sets (important for imbalanced datasets).
 
 ## Data visualization
+
+This is the data corelation with data among the table attributes.
+
+<img src = "./images/heatmap.png" width=300 height=300 style="text-align:center;">
+
+Shows relationships between dataset features and churn.
+
+## Modeling

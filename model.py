@@ -67,19 +67,13 @@ plt.savefig('./images/random_forester_model.png')
 # Get one tree from the forest (e.g., the first one)
 estimator = rf.estimators_[0]
 
-# Export as DOT format
-dot_data = tree.export_graphviz(
+
+# plot the tree
+plt.figure(figsize=(30,10))
+tree.plot_tree(
     estimator,
-    out_file=None,
     feature_names=X.columns,
     class_names=["No Churn", "Churn"],
-    filled=True,
-    rounded=True,
-    special_characters=True
+    filled=True
 )
-
-# Render with graphviz
-graph = graphviz.Source(dot_data)
-graph.render("decision_tree")  # saves as decision_tree.pdf
-graph
-
+plt.savefig("./images/decision-tree.png")
