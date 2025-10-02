@@ -31,3 +31,33 @@ This is the data corelation with data among the table attributes.
 Shows relationships between dataset features and churn.
 
 ## Modeling
+
+I used random forest as my model to predict customer churn. This model is a machine learning algorithm that uses many decision trees to make better predictions. Each tree looks at different random parts of the data and their results are combined by voting for classification or averaging for regression which makes it as ensemble learning technique. This helps in improving accuracy and reducing errors. 
+
+### Pros of Random Forester
+
+<ul>
+    <li>name</li>
+    <li>name</li>
+    <li>name</li>
+    <li>name</li>
+</ul>
+
+### Cons of Random Forester
+
+<ul>
+    <li>name</li>
+    <li>name</li>
+    <li>name</li>
+    <li>name</li>
+</ul>
+
+## Evaluation of Model
+
+<img src="./images/decision-tree.png">
+
+## What I Found
+
+## Impact
+
+## References
