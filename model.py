@@ -4,6 +4,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import export_graphviz
+from sklearn import tree
+import graphviz
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 
@@ -60,4 +63,23 @@ plt.title("Feature Importance")
 plt.bar(range(len(importances)), importances[indices], align="center")
 plt.xticks(range(len(importances)), features[indices], rotation=90)
 plt.savefig('./images/random_forester_model.png')
+
+# Get one tree from the forest (e.g., the first one)
+estimator = rf.estimators_[0]
+
+# Export as DOT format
+dot_data = tree.export_graphviz(
+    estimator,
+    out_file=None,
+    feature_names=X.columns,
+    class_names=["No Churn", "Churn"],
+    filled=True,
+    rounded=True,
+    special_characters=True
+)
+
+# Render with graphviz
+graph = graphviz.Source(dot_data)
+graph.render("decision_tree")  # saves as decision_tree.pdf
+graph
 
