@@ -10,10 +10,6 @@ For this project, I am using the Iranian Churn Dataset from the UC Irvine Machin
 
 ## Data Preprocessing
 
-### Handling Categorical Values
-
-Many machine learning algorithms, including Random Forests, work only with numbers, not text. So categorical columns (like "gender": ["Male", "Female"]) need to be converted to numeric form. So, pd.get_dummies converts categorical variables into dummy/indicator variables (One-Hot Encoding)
-
 ### Separate Churn
 
 In supervised learning, we need to separate Independent variables that describe the customer (age, usage, complaints, etc) from what we want to predict. Splits the dataset into X where all columns except "churn" and y with "churn" column.
@@ -37,27 +33,35 @@ I used random forest as my model to predict customer churn. This model is a mach
 ### Pros of Random Forester
 
 <ul>
-    <li>name</li>
-    <li>name</li>
-    <li>name</li>
-    <li>name</li>
+    <li>Random Forest provides very accurate predictions even with large datasets.</li>
+    <li>Random Forest can handle missing data well without compromising with accuracy.</li>
+    <li>It doesn’t require normalization or standardization on dataset.</li>
+    <li>When we combine multiple decision trees it reduces the risk of overfitting of the model.</li>
 </ul>
 
 ### Cons of Random Forester
 
 <ul>
-    <li>name</li>
-    <li>name</li>
-    <li>name</li>
-    <li>name</li>
+    <li>It can be computationally expensive especially with a large number of trees.</li>
+    <li>It’s harder to interpret the model compared to simpler models like decision trees.</li>
 </ul>
 
 ## Evaluation of Model
 
-<img src="./images/decision-tree.png">
+<img src="./images/random_forester_model.png" width=300 height=400>
 
 ## What I Found
+
+<img src="./images/decision-tree.png">
+
+<span>(you can see the full image in the <a href="decision_tree.pdf">decision_tree.pdf</a>)</span>
 
 ## Impact
 
 ## References
+
+<ul>
+    <li>Dataset: https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset</li>
+    <li>Model Information: https://www.geeksforgeeks.org/machine-learning/random-forest-algorithm-in-machine-learning/</li>
+    <li>Coding Help: Chat GPT</li>
+</ul>
